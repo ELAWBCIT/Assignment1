@@ -67,3 +67,53 @@ textarea {
     border-radius: 3px;
     margin: 24px 0;
 }
+
+.newnote {
+    font-family: 'montserrat', sans-serif; font-size: 0.75em; font-weight: normal;
+    background-color: #375F68;
+    border-radius: 8px;
+    color: white; 
+    padding: 10px;
+}
+
+.theme {
+    font-family: 'montserrat', sans-serif; font-size: 0.75em; font-weight: normal;
+    background-color: #56536A;
+    border-radius: 8px;
+    color: white; 
+    padding: 10px;
+}
+
+.save {
+    font-family: 'montserrat', sans-serif; font-size: 0.75em; font-weight: normal;
+    background-color: #375F68;
+    border-radius: 8px;
+    color: white; 
+    padding: 10px;
+    display: flex;
+}
+
+.cancel {
+    font-family: 'montserrat', sans-serif; font-size: 0.75em; font-weight: normal;
+    background-color: #9B332C;
+    border-radius: 8px;
+    color: white; 
+    padding: 10px;
+    display: flex;
+}
+
+.topbutton{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.bottombutton {
+    display: flex;
+    justify-content: right;
+}
+
+footer {
+    text-align: center;
+    margin-top: auto;;
+}
