@@ -123,10 +123,10 @@ footer {
     }
 
     .notes {
-        order: 2;
+        order: 1;
     }
 
     .main {
-        order: 1;
+        order: 2;
     }
 }
