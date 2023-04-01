@@ -118,6 +118,24 @@ footer {
     margin-top: auto;;
 }
 
+/* JS Script Changes */
+.darkTheme {
+    background-color: #050222;
+    color: #CDC7D4;
+}
+
+.NotesDarkTheme{
+    background-color: #080437;
+    color: #CDC7D4;
+}
+
+.hideElements{
+    /* either use the display:none or visibility:hidden */
+}
+
+
+/* Media Query Section */
+
 @media (max-width: 768px) {
     body{ grid-template-columns: 1fr;
     }
