@@ -82,9 +82,13 @@ function noteSaver(event) {
     }
     notesArray.push(newNote)
     //Find where my lists of notes are stored -- in this case it is in the class "noteslist"
+    let notationList = document.querySelector(".noteslist")
     //Create a new li for the newNote
+    let newLi = document.createElement("li")
     //Update the textContent of the new li for newNote. userInput becomes the textContent.
+    newLi.textContent = userInput
     //Add it to the notesList section of the li. 
+    notationList.appendChild(newLi)
 }
  
 noteSaverbutton.addEventListener('click', noteSaver)
