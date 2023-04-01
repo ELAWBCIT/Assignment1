@@ -1,3 +1,4 @@
+//Task 1) Dark Theme Implementation
 let themechanger = document.querySelector(".theme");
 console.log(themechanger);
 
@@ -15,23 +16,49 @@ function NoteTheme(event) {
 
 themechanger.addEventListener("click", NoteTheme);
 
+//Task 2) Cancel Button and Text Area Implementation + Re-Implementation 
+
 // Cancel Button - Should hide the text area.
 //querySelector the button known as "cancel"
+let cancelToggle = document.querySelector(".cancel");
 let textArea = document.querySelector("#textbox");
+let saveToggle = document.querySelector(".save");
+
+let newNoteToggle = document.querySelector(".newnote")
 
 function hideTextRelated(event) {
   //three querySelectors for each Text Area, Save, and Cancel.
+  cancelToggle.classList.add("hideElements")
   //document.querySelector("").classList.add
+  textArea.classList.add("hideElements")
   //we need to use add due to the fact we are not toggling.
+  saveToggle.classList.add("hideElements")
+  document.querySelector("#textbox").value = ''
 }
+
+cancelToggle.addEventListener("click", hideTextRelated)
 
 function newNotation(event) {
   //if else statement where
-    //check the hideTextRelated variables with contains() to see if they have class "hideElements"
-    //only should remove if contains() states it is there. 
-    //textArea.classList.remove
-    //document.querySelector("#textbox").value = '' -- to clear the textbox if there is anything shown.
+  //check the hideTextRelated variables with contains() to see if they have class "hideElements"
+  //only should remove if contains() states it is there. 
+  //textArea.classList.remove
+  if (cancelToggle.classList.contains("hideElements")) {
+    cancelToggle.classList.remove("hideElements")
+  }
+  if (textArea.classList.contains("hideElements")) {
+    textArea.classList.remove("hideElements")
+  }
+  if (saveToggle.classList.contains("hideElements")) {
+    saveToggle.classList.remove("hideElements")
+  }
 }
+
+newNoteToggle.addEventListener("click", newNotation)
+    //document.querySelector("#textbox").value = '' -- to clear the textbox if there is anything shown.
+
+//Task 3) 
+
 
 let notes1 = {
     title:"note one",

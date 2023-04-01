@@ -131,6 +131,7 @@ footer {
 
 .hideElements{
     /* either use the display:none or visibility:hidden */
+    display: none; 
 }
 
 
