@@ -57,7 +57,7 @@ function newNotation(event) {
 newNoteToggle.addEventListener("click", newNotation)
     //document.querySelector("#textbox").value = '' -- to clear the textbox if there is anything shown.
 
-//Task 3) 
+//Task 3) Save Button Linkage and List appendage. 
 
 
 let notes1 = {
@@ -78,8 +78,9 @@ function noteSaver(event) {
     let userInput = prompt('What is the title of the note you want to save?')
     let newNote = {
         title: userInput,
-        text: textArea.value,
+        body: textArea.value,
     }
+    // console.log(newNote);
     notesArray.push(newNote)
     //Find where my lists of notes are stored -- in this case it is in the class "noteslist"
     let notationList = document.querySelector(".noteslist")
@@ -89,6 +90,30 @@ function noteSaver(event) {
     newLi.textContent = userInput
     //Add it to the notesList section of the li. 
     notationList.appendChild(newLi)
+    console.log(notesArray)
 }
  
 noteSaverbutton.addEventListener('click', noteSaver)
+
+// Task 4) List items on sidebar clicked searches through notesArray, finds JS object property equal to text of clicked item. 
+let notationClick = document.querySelector(".noteslist")
+// Make the list items clickable - addEventListener
+function noteClicker(event) {
+    console.log(event.target);
+// For loop through our notesArray to look for whatever object is the same as our title. 
+    for (let item of notesArray) {
+        if (item['title'] == event.target.innerHTML) {
+            console.log(event.target.innerHTML);
+            textArea.value = item['body'];
+        } 
+    } 
+    // for (let i = 0; i < notesArray.length; i++) {
+    //   if (notesArray[i]['title'] == event.target.innerHTML) {
+    //     console.log(notesArray[i]);
+    //     textArea.value = notesArray[i]['body'];
+    //   }
+    // }
+// document.querySelector("#textbox").value = textArea.value 
+}
+
+notationClick.addEventListener('click', noteClicker) 
